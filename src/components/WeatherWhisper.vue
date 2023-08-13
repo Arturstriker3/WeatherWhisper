@@ -95,7 +95,7 @@ export default {
     },
     fetchWeatherData() {
       // Utiliza a geolocalização do usuário
-      $.getJSON('https://ip-api.com/json', (data) => {
+      $.getJSON('http://ip-api.com/json', (data) => {
         this.lat = data.lat;
         this.lon = data.lon;
 

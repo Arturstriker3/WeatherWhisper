@@ -95,9 +95,9 @@ export default {
     },
     fetchWeatherData() {
       // Utiliza a geolocalização do usuário
-      $.getJSON('http://ip-api.com/json', (data) => {
-        this.lat = data.lat;
-        this.lon = data.lon;
+      $.getJSON('https://ipapi.co/json/', (data) => {
+        this.lat = data.latitude;
+        this.lon = data.longitude;
 
         $.getJSON(`https://api.openweathermap.org/data/2.5/weather?lat=${this.lat}&lon=${this.lon}&appid=059dcee9c15c93a942eb1f38b72876be`, (weatherData) => {
           this.cityName = weatherData.name;
